@@ -89,6 +89,7 @@ dat$Q3_b[dat$Q3!="Disagree somewhat"]<-0
 
 #Crude visualization
 library(ggplot2)
+library(ggpubr)
 p1<-ggplot(dat,aes(Q1))+geom_bar(aes(fill = as.factor(Q1_b)))+facet_wrap(~cat,dir="h")+scale_fill_manual("Top 2 box ratings", labels = c("no","yes"),values = c("#abd9e9","#fdae61"))+
   theme_bw()+theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5), panel.grid.major = element_blank(),panel.grid.minor = element_blank())+
   scale_x_discrete(label=c("2","3","4","5"))
